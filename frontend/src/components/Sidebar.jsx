@@ -19,7 +19,7 @@ function Sidebar() {
 
   const getAllThreads = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/thread");
+      const response = await fetch("https://quickgpt-backend.onrender.com");
       const res = await response.json();
       const filteredData = res.map((thread) => ({
         threadId: thread.threadId,
@@ -48,7 +48,7 @@ function Sidebar() {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/thread/${newThreadId}`
+        `https://quickgpt-backend.onrender.com/${newThreadId}`
       );
       const res = await response.json();
       console.log(res);
@@ -58,12 +58,12 @@ function Sidebar() {
     } catch (err) {
       console.log(err);
     }
-  };
+  };S
 
   const deleteThread = async (threadId) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/thread/${threadId}`,
+        `https://quickgpt-backend.onrender.com/${threadId}`,
         { method: "DELETE" }
       );
       const res = await response.json();
