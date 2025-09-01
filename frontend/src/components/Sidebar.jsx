@@ -58,7 +58,7 @@ function Sidebar() {
     } catch (err) {
       console.log(err);
     }
-  };S
+  };
 
   const deleteThread = async (threadId) => {
     try {
