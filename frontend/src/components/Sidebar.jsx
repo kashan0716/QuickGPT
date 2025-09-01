@@ -47,13 +47,7 @@ function Sidebar() {
     setCurrThreadId(newThreadId);
 
     try {
-<<<<<<< HEAD
       const response = await fetch(`http://localhost:8080/api/thread/${newThreadId}`);
-=======
-      const response = await fetch(
-        `https://quickgpt-backend.onrender.com`
-      );
->>>>>>> afdc27af2e6e359569f0bf4ea5aa4066f3bef901
       const res = await response.json();
       console.log(res);
       setPrevChats(res);
@@ -66,12 +60,7 @@ function Sidebar() {
 
   const deleteThread = async (threadId) => {
     try {
-<<<<<<< HEAD
       const response = await fetch(`http://localhost:8080/api/thread/${threadId}`,
-=======
-      const response = await fetch(
-        `https://quickgpt-backend.onrender.com`,
->>>>>>> afdc27af2e6e359569f0bf4ea5aa4066f3bef901
         { method: "DELETE" }
       );
       const res = await response.json();
