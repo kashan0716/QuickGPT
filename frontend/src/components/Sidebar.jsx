@@ -48,7 +48,7 @@ function Sidebar() {
 
     try {
       const response = await fetch(
-        `https://quickgpt-backend.onrender.com`
+        "https://quickgpt-backend.onrender.com"
       );
       const res = await response.json();
       console.log(res);
@@ -63,7 +63,7 @@ function Sidebar() {
   const deleteThread = async (threadId) => {
     try {
       const response = await fetch(
-        `https://quickgpt-backend.onrender.com`,
+        "https://quickgpt-backend.onrender.com",
         { method: "DELETE" }
       );
       const res = await response.json();
